@@ -1,0 +1,9 @@
+<h2>Courses</h2>
+<ul>
+    <li *ngFor="#course of courses" (click)="onClick(course)">
+        <b>{{course.name}}</b> &mdash; ({{course.instructor}})
+    </li>
+</ul>
+<h3>{{selectedCourse.name}}</h3>
+<p>This course is taught by {{selectedCourse.instructor}}</p>
+<input #entered (keyup.enter)="onEnter(entered.value)"/>
